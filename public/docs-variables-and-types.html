@@ -406,66 +406,66 @@ char c = 'A';
   </div>
   <h2>การประกาศตัวแปร</h2>
   <p>ตอนนี้เราจะมาเรียนวิธีการประกาศและกำหนดค่าเริ่มต้นให้กับตัวแปรกับตัวอย่างง่ายๆ</p>
-<pre class=" language-c"><code class=" language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string"><stdio.h></span></span>
+  <pre class=" language-c"><code class=" language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
 
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
-< span class="token keyword">int</> b<span class="token punctuation">;</span>
-b <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
-<span class="token keyword">int</span> c <span class="token operator">=</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
-<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Value of c is %d"</span><span class="token punctuation">,</span> c<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+    <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> b<span class="token punctuation">;</span>
+        b <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> c <span class="token operator">=</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Value of c is %d"</span><span class="token punctuation">,</span> c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    </code></pre>
   <p>ในตัวอย่าง เราได้สร้างตัวแปรสามตัวคือ <code>a</code>, <code>b</code> และ <code>c</code> ที่มีชนิดข้อมูลเป็น <code>int</code> และเรารวมค่าของ <code>a</code> และ <code>b</code> แล้วเก็บไว้ในตัวแปร <code>c</code> ข้างล่างนี้เป็นผลลัพธ์ของโปรแกรม</p>
 <pre class="code-result language-result"><code class=" language-result">Value of c is 15
 </code></pre>
   <p>อย่างไรก็ตาม คุณสามารถประกาศชนิดข้อมูลอื่นได้ ซึ่งมันไม่อยากเกินไป มาดูตัวอย่างเพิ่มเติม</p>
-<pre class=" language-c"><code class=" language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string"><stdio.h></span></span>
+  <pre class=" language-c"><code class=" language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
 
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">float</span> PI <span class="token operator">=</span> <span class="token number">3.14</span><span class="token punctuation">;</span>
-<span class="token keyword">int</span> r<span class="token punctuation">;</span>
-<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"Enter circle radius %d"</span><span class="token punctuation">,</span> <span class="token operator">&</span>r<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">double</span> result <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> PI <span class="token operator">*</span> r<span class="token punctuation">;</span>
-<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Area is %f"</span><span class="token punctuation">,</span> result <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+    <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">float</span> PI <span class="token operator">=</span> <span class="token number">3.14</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> r<span class="token punctuation">;</span>
+        <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"Enter circle radius %d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>r<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">double</span> result <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> PI <span class="token operator">*</span> r<span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Area is %f"</span><span class="token punctuation">,</span> result <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    </code></pre>
   <p>ในตัวอย่าง แสดงให้คุณเห็นการใช้ตัวแปรประเภทต่างๆ ในภาษา C นั้นมีข้อมูลประเภทต่างๆ ที่ให้เราสามารถจัดการกับข้อมูลที่แตกต่างกันออกไป เช่น ตัวเลขจำนวนเต็ม ตัวเลขจำนวนจริง หรือข้อมูลแบบตัวอักษร ซึ่งข้อมูลแต่ละประเภทมีรูปแบบการใช้งานและขนาดของข้อมูลที่แตกต่างกัน ดังแสดงในตารางก่อนหน้า ต่อไปเราจะอธิบายและแสดงตัวอย่างของการใช้ข้อมูลประเภทต่างๆ ในภาษา C สำหรับเขียนโปรแกรม</p>
   <h2>Boolean</h2>
   <p>Boolean เป็นประเภทข้อมูลที่มีได้เพียงสองค่าคือจริง <code>true</code> และเท็จ <code>false</code> ซึ่งเป็นประเภทของตัวแปรสำหรับเก็บค่าที่เป็นไปได้เพียงสองค่า เช่น กลางวันและกลางคืน สีขาวและสีดำ ร้อนและหนาว เป็นต้น ข้อมูลประเภทนี้มักจะใช้สำหรับสร้าง Expression สำหรับเงื่อนไขการทำงานของโปรแกรม ในภาษา C ค่าของ Boolean นั้นใช้ <code>1</code> หรือ <code>true</code> สำหรับค่าที่เป็นจริงและ <code>0</code> หรือ <code>false</code> สำหรับค่าที่เป็นเท็จ มาดูตัวอย่างการใช้งาน</p>
-<pre class=" language-c"><code class=" language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string"><stdio.h></span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string"><stdbool.h></span></span>
-
-<span class="token keyword">int</span> <span class="token function">main</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-bool gender <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-bool open <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-
-<span class="token keyword">if</span> <span class="token punctuation">(</span>gender<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"This is the boy.\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">else</span>
-<span class="token punctuation">{</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"This is the girl.\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">if</span> <span class="token punctuation">(</span>open<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"The door is open.\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">else</span>
-<span class="token punctuation">{</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"The door is not open.\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+  <pre class=" language-c"><code class=" language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+    <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdbool.h&gt;</span></span>
+    
+    <span class="token keyword">int</span> <span class="token function">main</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        bool gender <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        bool open <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>gender<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"This is the boy.\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span>
+        <span class="token punctuation">{</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"This is the girl.\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>open<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"The door is open.\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span>
+        <span class="token punctuation">{</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"The door is not open.\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    
+        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    </code></pre>
   <p>ในตัวอย่าง เป็นการใช้งานตัวแปรประเภท Boolean ในภาษา C ในตัวแปร <code>gender</code> เราได้กำหนดตัวแปรให้หมายถึงเพศ ถ้าในตัวแปรนั้นมีค่าเป็นจริงจะหมายถึงเป็นผู้ชาย และถ้ามีค่าเป็นเท็จจะหมายถึงเป็นผู้หญิง และตัวแปร <code>open</code> ใช้สำหรับเก็บสถานะการเปิดและปิดของประตู เมื่อตัวแปรมีค่าเป็นจริงจะหมายถึงประตูถูกเปิดอยู่ และเมื่อค่าในตัวแปรเป็นเท็จก็หมายความว่าประตูนั้นไม่ได้เปิด</p>
 <pre class="code-result language-result"><code class=" language-result">This is the boy.
 The door is not open.
@@ -473,23 +473,23 @@ The door is not open.
   <p>ในคอมไพเลอร์ของภาษา C ในปัจจุบันนั้น ข้อมูลประเภท bool นั้นถูกนำออกแล้ว ดังนั้นเพื่อใช้ข้อมูลประเภทนี้ เราต้องทำเข้าไลบรารี่จาก <code>stdbool.h</code> สำหรับการใช้งาน และคอมไพลเลอร์ของคุณสนับสนุนเวอร์ชัน C99 ด้วย อย่างไรก็ตามมีหลายวิธีที่จะ Implement ข้อมูลประเภท bool ถ้าหากคุณใช้บ่อยๆ ในโปรแกรม หรือสามารถใช้ข้อมูลประเภท Integer แทนได้</p>
   <h2>Char ตัวอักษร</h2>
   <p>Char เป็นประเภทข้อมูลที่ใช้สำหรับเก็บตัวอักษรจำนวนหนึ่งตัวอักษรใน ASCII ภาษา C นั้นยังไม่ได้สนับสนุนการเก็บข้อมูลแบบ String แต่คุณสามารถทำแบบนั้นได้ โดยการใช้ Char array เพื่อเก็บตัวอักษรที่ต่อกันหลายตัว มาดูตัวอย่างการใช้งานตัวแปรประเภท <code>char</code> ในภาษา C</p>
-<pre class=" language-c"><code class=" language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string"><stdio.h></span></span>
+  <pre class=" language-c"><code class=" language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
 
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">char</span> n <span class="token operator">=</span> <span class="token string">'A'</span><span class="token punctuation">;</span>
-<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%c\n"</span><span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token keyword">char</span> <span class="token operator">*</span>name <span class="token operator">=</span> <span class="token string">"marcuscode"</span><span class="token punctuation">;</span>
-<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token keyword">char</span> extension<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">".com"</span><span class="token punctuation">;</span>
-<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span> extension<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+    <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">char</span> n <span class="token operator">=</span> <span class="token string">'A'</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%c\n"</span><span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+        <span class="token keyword">char</span> <span class="token operator">*</span>name <span class="token operator">=</span> <span class="token string">"marcuscode"</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+        <span class="token keyword">char</span> extension<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">".com"</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span> extension<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    </code></pre>
   <p>ในตัวอย่าง เป็นการประกาศตัวแปรประเภท <code>char</code> โดยการเก็บตัวอักษร <code>'A'</code> ตัวอักษรทุกตัวนั้นมีรหัส ASCII ของมันในฐาน 10 ในภาษา C นั้นข้อมูลประเภท Char และ Integer สามารถแปลงค่าได้โดยวิธี implicit และ Explicit type casting ยกตัวอย่างเช่น เมื่อเราต้องการค่าที่หมายถึง A และสามารถใช้ 65 แทนได้ดังตัวอย่างข้างล่าง</p>
 <pre class=" language-c"><code class=" language-c"><span class="token keyword">char</span> a <span class="token operator">=</span> <span class="token number">65</span><span class="token punctuation">;</span> <span class="token comment">// A</span>
 <span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token string">'A'</span><span class="token punctuation">;</span> <span class="token comment">// 65</span>
@@ -513,37 +513,37 @@ marcuscode.com
   </div>
   <h2>Integer ตัวเลขจำนวนเต็ม</h2>
   <p>Integer เป็นประเภทข้อมูลแบบจำนวนเต็ม ซึ่งข้อมูลแบบ Integer นั้นจะประกอบไปด้วยหลายขนาด เช่น <code>short</code>  <code>int</code> และ <code>long</code> ซึ่งจะเก็บข้อมูลในระยะที่แตกต่างกัน เรามักจะใช้ตัวแปรประเภท Integer สำหรับเก็บข้อมูลที่นับได้ เช่น จำนวนของผลไม้ในตระกร้า จำนวนของคนในห้อง จำนวนของรถที่วิ่งบนท้องถนน เป็นต้น มาดูตัวอย่างการใช้งานตัวแปรประเภท Integer ในภาษา C</p>
-<pre class=" language-c"><code class=" language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string"><stdio.h></span></span>
+  <pre class=" language-c"><code class=" language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
 
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> apple <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
-<span class="token keyword">int</span> orange <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
-<span class="token keyword">int</span> total <span class="token operator">=</span> apple <span class="token operator">+</span> orange<span class="token punctuation">;</span>
-
-<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d apples and %d oranges\n"</span><span class="token punctuation">,</span> apple<span class="token punctuation">,</span> orange<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"I have %d fruits in total"</span><span class="token punctuation">,</span> total<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+    <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> apple <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> orange <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> total <span class="token operator">=</span> apple <span class="token operator">+</span> orange<span class="token punctuation">;</span>
+    
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d apples and %d oranges\n"</span><span class="token punctuation">,</span> apple<span class="token punctuation">,</span> orange<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"I have %d fruits in total"</span><span class="token punctuation">,</span> total<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    </code></pre>
   <p>ในตัวอย่าง เป็นการใช้งานตัวแปรประเภท Integer สำหรับเก็บจำนวนของผลไม้แต่ละชนิด และหาผลรวมของผลไม้ทั้งสองในตัวแปร <code>total</code> ต่อไปเราจะพูดเกี่ยวกับค่ามากสุดและค่าน้อยสุดของข้อมูลประเภท Integer ในภาษา C ข้างล่างนี้เป็นตัวอย่างของโปรแกรม</p>
-<pre class=" language-c"><code class=" language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string"><stdio.h></span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string"><limits.h></span></span>
-
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Maximum value of int: %d\n"</span><span class="token punctuation">,</span> INT_MAX<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Minimum  value of int: %d\n"</span><span class="token punctuation">,</span> INT_MIN<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token keyword">int</span> a <span class="token operator">=</span> INT_MAX<span class="token punctuation">;</span>
-<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
-a <span class="token operator">=</span> a <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
-<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+  <pre class=" language-c"><code class=" language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+    <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;limits.h&gt;</span></span>
+    
+    <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Maximum value of int: %d\n"</span><span class="token punctuation">,</span> INT_MAX<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Minimum  value of int: %d\n"</span><span class="token punctuation">,</span> INT_MIN<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+        <span class="token keyword">int</span> a <span class="token operator">=</span> INT_MAX<span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        a <span class="token operator">=</span> a <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    </code></pre>
   <p>ในตัวอย่าง เป็นโปรแกรมในการแสดงค่ามากสุดและค่าน้อยสุดของข้อมูลประเภท Integer โดยใช้ค่าคงที่ <code>INT_MAX</code> และ <code>INT_MIN</code> ซึ่งเป็นค่าที่กำหนดโดย Marco ที่อยู่ในไลบรารี่ <code>limits.h</code> ของภาษา C และเราทดสอบการทำงานของโปรแกรมโดยการกำหนดค่ามากสุดให้กับตัวแปร <code>a</code> และเพิ่มค่าของตัวแปรขึ้นไป 1 ผลลัพธ์ที่ได้คือค่าในตัวแปรนั้นเกิด Overflow และเป็นที่น้อยที่สุดของ Integer ซึ่งจะได้ผลลัพธ์ตามข้างล่าง</p>
 <pre class="code-result language-result"><code class=" language-result">Maximum value of int: 2147483647
 Minimum value of int: -2147483648
@@ -552,28 +552,22 @@ Minimum value of int: -2147483648
 </code></pre>
   <h2>Floating-point numbers ตัวเลขจำนวนจริง</h2>
   <p>Floating-point number เป็นประเภทข้อมูลสำหรับเก็บตัวเลขจำนวนจริง ในภาษา C จะมีอยู่สองประเภทคือ <code>float</code> และ <code>double</code> สิ่งที่แตกต่างกันคือขนาดของพื้นที่ที่ใช้ในการจัดเก็บ และข้อมูลประเภท <code>double</code> นั้นจะเก็บจำนวนของทศนิยมได้มากกว่า ข้อมูลประเภทนี้จะใช้เก็บข้อมูลที่มีค่าเป็นเศษส่วนหรือตัวเลขที่มีเลขหลังจุดทศนิยม ยกตัวอย่างเช่น ข้อมูลการคำนวณทางวิทยาศาสตร์ เป็นต้น มาดูตัวอย่างการประกาศตัวแปรและใช้งาน</p>
-<pre class=" language-c"><code class=" language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string"><stdio.h></span></span>
-
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">float</span> pi <span class="token operator">=</span> <span class="token number">3.14f</span><span class="token punctuation">;</span>
-<span class="token keyword">float</span> half <span class="token operator">=</span> <span class="token number">3</span> <span class="token operator">/</span> <span class="token number">2.0f</span><span class="token punctuation">;</span>
-<span class="token keyword">float</span> half2 <span class="token operator">=</span> <span class="token number">3</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
-
-<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Pi: %f\n"</span><span class="token punctuation">,</span> pi<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Half of 3: %f\n"</span><span class="token punctuation">,</span> half<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Half of 3: %f\n"</span><span class="token punctuation">,</span> half2<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token keyword">double</span> gravity <span class="token operator">=</span> <span class="token number">9.807</span><span class="token punctuation">;</span>
-<span class="token keyword">double</span> earth_mass <span class="token operator">=</span> <span class="token number">5.972E24</span><span class="token punctuation">;</span>
-<span class="token keyword">double</span> meter <span class="token operator">=</span> <span class="token number">1E-3</span><span class="token punctuation">;</span>
-
-<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Earth gravity: %lf m/s^2\n"</span><span class="token punctuation">,</span> gravity<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Earth mass: %lf kg\n"</span><span class="token punctuation">,</span> earth_mass<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"1 centimeter: %lf meter\n"</span><span class="token punctuation">,</span> meter<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+  <pre class=" language-c"><code class=" language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+    <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;limits.h&gt;</span></span>
+    
+    <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Maximum value of int: %d\n"</span><span class="token punctuation">,</span> INT_MAX<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Minimum  value of int: %d\n"</span><span class="token punctuation">,</span> INT_MIN<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+        <span class="token keyword">int</span> a <span class="token operator">=</span> INT_MAX<span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        a <span class="token operator">=</span> a <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    </code></pre>
   <p>ในตัวอย่าง เป็นการใช้งานตัวแปรสำหรับเก็บข้อมูลในรูปแบบของทศนิยมทั้งตัวแปรประเภท <code>float</code> และ <code>double</code> ในส่วนแรกเราได้ประกาศตัวแปร <code>float</code> จำนวนสามตัวและกำหนดค่าให้กับตัวแปร ค่าของข้อมูลประเภท <code>float</code> นั้นจะลงท้ายด้วย <code>f</code> หรือ <code>F</code> เสมอ</p>
 <pre class=" language-c"><code class=" language-c"><span class="token keyword">float</span> half <span class="token operator">=</span> <span class="token number">3</span> <span class="token operator">/</span> <span class="token number">2.0f</span><span class="token punctuation">;</span>
 <span class="token keyword">float</span> half2 <span class="token operator">=</span> <span class="token number">3</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
